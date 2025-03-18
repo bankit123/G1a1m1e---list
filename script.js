@@ -25,7 +25,6 @@ function displayGames(games) {
                         <h5 class="card-title">#${index + 1} - ${
       game.name.en
     }</h5>
-                        <p class="card-text">${game.description.en}</p>
                         <div class="mb-2">
                             ${game.tags.en
                               .map(
@@ -34,20 +33,19 @@ function displayGames(games) {
                               )
                               .join("")}
                         </div>
-                        <a href="${
-                          game.url
-                        }" class="btn btn-primary btn-sm" target="_blank">Play Now</a>
-                        <a href="${
-                          game.gamePreviews.en
-                        }" class="btn btn-secondary btn-sm" target="_blank">Watch Preview</a>
+                       
+                       
                         <hr>
                         <!-- Copy Buttons -->
                         <button class="btn btn-success btn-sm" onclick="copyToClipboard('${
                           game.url
-                        }', 'URL copied!')">Copy URL</button>
+                        }', 'URL copied!')">URL</button>
                         <button class="btn btn-warning btn-sm" onclick="copyToClipboard('${
                           game.name.en
-                        }', 'Game name copied!')">Copy Name</button>
+                        }', 'Game name copied!')">Name</button>
+                        <button class="btn btn-info btn-sm" onclick="copyToClipboard('${
+                          game.code
+                        }', 'Game code copied!')">Code</button>
                     </div>
                 </div>
             </div>`;
